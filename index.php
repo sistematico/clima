@@ -98,8 +98,8 @@
 	document.addEventListener('DOMContentLoaded', init, false);
 
 	function init(){
-  		adsBlocked(function(blocked){
-    		if(blocked){
+  		adsBlocked(function(blocked) {
+    		if (blocked) {
 				document.getElementById("warn").classList.add("is-active");
 				setTimeout(() => {
 					document.getElementById("warn").classList.remove("is-active");
@@ -124,10 +124,10 @@
 		fetch(myRequest).then(function(response) {
 			return response;
 		}).then(function(response) {
-			console.log(response);
+			//console.log(response);
 			callback(false)
 		}).catch(function(e){
-			console.log(e)
+			//console.log(e)
 			callback(true)
 		});
 	}
