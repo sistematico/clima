@@ -93,19 +93,47 @@
 		const apikey = "<?php echo $config['api_key']; ?>";
 		const ip = "<?php echo $_SERVER['REMOTE_ADDR']; ?>";
 	</script> 
-	<script src="js/ads.js"></script>
 	<script>
-    if (window.canRunAds === 'undefined') {
-		document.getElementById("warn").classList.add("is-active");
+	document.addEventListener('DOMContentLoaded', init, false);
+
+	function init(){
+  		adsBlocked(function(blocked){
+    		if(blocked){
+				document.getElementById("warn").classList.add("is-active");
+				setTimeout(() => {
+					document.getElementById("warn").classList.remove("is-active");
+				}, 8000);
+			} 
+			//else {
+    		//  document.getElementById('result').innerHTML = 'ads are not blocked';
+    		//}
+		})
+	}
+
+	function adsBlocked(callback){
+		var testURL = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+
+		var myInit = {
+			method: 'HEAD',
+			mode: 'no-cors'
+		};
+
+		var myRequest = new Request(testURL, myInit);
+
+		fetch(myRequest).then(function(response) {
+			return response;
+		}).then(function(response) {
+			console.log(response);
+			callback(false)
+		}).catch(function(e){
+			console.log(e)
+			callback(true)
+		});
 	}
 	
 	document.querySelector(".modal-close").addEventListener('click', () => {
 		document.getElementById("warn").classList.remove("is-active");
 	});
-
-	setTimeout(() => {
-		document.getElementById("warn").classList.remove("is-active");
-	}, 8000);
 	</script>
 	<script src="js/weather.js"></script>
 </body>
