@@ -3,21 +3,21 @@
 ?>
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Clima atual">
-    	<meta name="author" content="Lucas Saliés Brum">
-		<title>Clima</title>		
-		<meta property="og:title" content="Clima" />
-		<meta property="og:description" content="Clima atual" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="http://clima.lucasbrum.net" />
-		<meta property="og:image" content="img/frio.png" />
-		<link rel="stylesheet" href="css/bulma.min.css">
-		<link rel="stylesheet" href="css/fontawesome.min.css">
-		<link rel="stylesheet" href="css/main.css">
-		<link rel="shortcut icon" href="img/favicon.ico">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Clima atual">
+	<meta name="author" content="Lucas Saliés Brum">
+	<title>Clima</title>		
+	<meta property="og:title" content="Clima" />
+	<meta property="og:description" content="Clima atual" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://clima.lucasbrum.net" />
+	<meta property="og:image" content="img/frio.png" />
+	<link rel="stylesheet" href="css/bulma.min.css">
+	<link rel="stylesheet" href="css/fontawesome.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="shortcut icon" href="img/favicon.ico">
 </head>
 <body>
 	<section class="hero is-info is-fullheight">
@@ -26,7 +26,6 @@
 				<div class="container">
 					<div class="navbar-brand">
 						<a class="navbar-item">
-							<!-- <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo"> -->
 							Clima
 						</a>
 						<span class="navbar-burger burger" data-target="navbarMenuHeroB">
