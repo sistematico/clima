@@ -101,6 +101,7 @@
 	<script>
 		const apikey = "<?php echo $config['api_key']; ?>";
 		const ip = "<?php echo $_SERVER['REMOTE_ADDR']; ?>";
+		const cidade = "<?php echo (isset($_GET['c']) ? $_GET['c'] : ''); ?>";
 	</script>
 	<script src="js/weather.js"></script>
 </body>
