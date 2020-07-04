@@ -104,10 +104,10 @@
 				setTimeout(() => {
 					document.getElementById("warn").classList.remove("is-active");
 				}, 8000);
-			} 
-			//else {
-    		//  document.getElementById('result').innerHTML = 'ads are not blocked';
-    		//}
+			} else {
+				document.getElementById("warn").classList.remove("is-active");
+				//document.getElementById('result').innerHTML = 'ads are not blocked';
+    		}
 		})
 	}
 
