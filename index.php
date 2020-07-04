@@ -54,12 +54,9 @@
 			<nav class="tabs is-boxed is-fullwidth">
 				<div class="container">
 					<ul>
-						<li class="is-active"><a>Overview</a></li>
-						<li><a>Modifiers</a></li>
-						<li><a>Grid</a></li>
-						<li><a>Elements</a></li>
-						<li><a>Components</a></li>
-						<li><a>Layout</a></li>
+						<li class="is-active"><a href="/">Início</a></li>
+						<li><a href="api.php">API</a></li>
+						<li><a href="creditos.php">Créditos</a></li>
 					</ul>
 				</div>
 			</nav>
