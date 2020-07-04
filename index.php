@@ -95,10 +95,9 @@
 	</script> 
 	<script src="js/ads.js"></script>
 	<script>
-    //if (window.canRunAds === undefined) {
+    if (window.canRunAds === 'undefined') {
 		document.getElementById("warn").classList.add("is-active");
-		//document.getElementsByTagName("html")[0].classList.add("is-clipped");
-	//}
+	}
 	
 	document.querySelector(".modal-close").addEventListener('click', () => {
 		document.getElementById("warn").classList.remove("is-active");
