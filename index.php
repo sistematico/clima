@@ -89,41 +89,25 @@
   		</div>
   		<button class="modal-close is-large" aria-label="close"></button>
 	</div>
-	<script>
-	document.addEventListener('DOMContentLoaded', init, false);
+	<script src="/js/dfp.js" type="text/javascript"></script>
+	<script type="text/javascript">
 
-	function init(){
-  		adsBlocked(function(blocked) {
-    		if (blocked) {
-				document.getElementById("warn").classList.add("is-active");
+	if (!document.getElementById('UWlojRuwYmAb')){
+		document.getElementById("warn").classList.add("is-active");
 				setTimeout(() => {
 					document.getElementById("warn").classList.remove("is-active");
 				}, 8000);
-			} else {
-				document.getElementById("warn").classList.remove("is-active");
-				//document.getElementById('result').innerHTML = 'ads are not blocked';
-    		}
-		})
-	}
 
-	function adsBlocked(callback){
-		var testURL = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+  
+} 
 
-		var myInit = {
-			method: 'HEAD',
-			mode: 'no-cors'
-		};
 
-		var request = new Request(testURL, myInit);
+		
+				//document.getElementById("warn").classList.remove("is-active");
 
-		fetch(request).then(function(success) {
-			return success;
-		}).then(function(success) {
-			callback(false)
-		}).catch(function(error){
-			callback(true)
-		});
-	}
+   
+
+
 	
 	document.querySelector(".modal-close").addEventListener('click', () => {
 		document.getElementById("warn").classList.remove("is-active");
