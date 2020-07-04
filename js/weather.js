@@ -10,11 +10,26 @@ fetch('https://ipapi.co/' + ip + '/json/').then(function(response) {
         document.querySelector('.clima').innerHTML = `<i class="fas fa-thermometer-half"></i> ${json.main.temp}°C`;
         document.querySelector('.local').innerHTML = `em ${coord.city}, ${coord.region}, ${coord.country}`;
 
+        if (document.querySelector('.hero').classList.contains('is-info'))
+            document.querySelector('.hero').classList.remove('is-info');
+
+        if (document.querySelector('.hero').classList.contains('is-link'))
+            document.querySelector('.hero').classList.remove('is-link');
+
+        if (document.querySelector('.hero').classList.contains('is-warning'))
+            document.querySelector('.hero').classList.remove('is-warning');
+
+        if (document.querySelector('.hero').classList.contains('is-danger'))
+            document.querySelector('.hero').classList.remove('is-danger');
+
         if (json.main.temp < 25) {
+            document.querySelector('.hero').classList.add('is-link');
             document.querySelector('.icone').src = 'img/frio.svg';
         } else if (json.main.temp < 26) {
+            document.querySelector('.hero').classList.add('is-warning');
             document.querySelector('.icone').src = 'img/legal.svg';
         } else {
+            document.querySelector('.hero').classList.add('is-danger');
             document.querySelector('.icone').src = 'img/calor.svg';
         } 
     });
