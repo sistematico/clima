@@ -114,15 +114,13 @@
 			mode: 'no-cors'
 		};
 
-		var myRequest = new Request(testURL, myInit);
+		var request = new Request(testURL, myInit);
 
-		fetch(myRequest).then(function(response) {
-			return response;
-		}).then(function(response) {
-			//console.log(response);
+		fetch(request).then(function(success) {
+			return success;
+		}).then(function(success) {
 			callback(false)
-		}).catch(function(e){
-			//console.log(e)
+		}).catch(function(error){
 			callback(true)
 		});
 	}
