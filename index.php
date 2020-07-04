@@ -45,9 +45,11 @@
 
 		<div class="hero-body">
 			<div class="container has-text-centered">
-				<p><figure class="image is-128x128">
-  					<img class="icone" src="">
-				</figure></p>
+				<p>
+					<figure class="image is-128x128">
+  						<img class="icone" src="">
+					</figure>
+				</p>
 				<p class="title clima"></p>
 				<p class="subtitle local"></p>
 			</div>
