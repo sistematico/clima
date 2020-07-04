@@ -25,7 +25,7 @@
 			<nav class="navbar">
 				<div class="container">
 					<div class="navbar-brand">
-						<a class="navbar-item">
+						<a href="/" class="navbar-item">
 							Clima
 						</a>
 						<span class="navbar-burger burger" data-target="navbarMenuHeroB">
