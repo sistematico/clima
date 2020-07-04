@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="css/fontawesome.min.css">
 </head>
 <body>
-	<section class="hero is-info is-large">
+	<section class="hero is-info is-fullheight">
 		<div class="hero-head">
 			<nav class="navbar">
 				<div class="container">
