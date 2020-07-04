@@ -95,12 +95,11 @@
 		const ip = "<?php echo $_SERVER['REMOTE_ADDR']; ?>";
 	</script> 
 	<script src="js/ads.js"></script>
-	<script src="js/weather.js"></script>
 	<script>
-    if (window.canRunAds === undefined) {
+    //if (window.canRunAds === undefined) {
 		document.getElementById("warn").classList.add("is-active");
 		//document.getElementsByTagName("html")[0].classList.add("is-clipped");
-	}
+	//}
 	
 	document.addEventListener('DOMContentLoaded', () => {
   		(document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
@@ -112,5 +111,6 @@
   		});
 	});
 	</script>
+	<script src="js/weather.js"></script>
 </body>
 </html>
