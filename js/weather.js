@@ -53,10 +53,10 @@ if (cidade != "") {
             if (document.querySelector('.hero').classList.contains('is-danger'))
                 document.querySelector('.hero').classList.remove('is-danger');
 
-            if (json.main.temp < 25) {
+            if (json.main.temp < 20) {
                 document.querySelector('.hero').classList.add('is-link');
                 document.querySelector('.icone').src = 'img/frio.svg';
-            } else if (json.main.temp < 26) {
+            } else if (json.main.temp < 25) {
                 document.querySelector('.hero').classList.add('is-warning');
                 document.querySelector('.icone').src = 'img/legal.svg';
             } else {
