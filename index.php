@@ -98,7 +98,8 @@
 	<script src="js/weather.js"></script>
 	<script>
     if (window.canRunAds === undefined) {
-    	document.getElementById("warn").classList.add("is-active");
+		document.getElementById("warn").classList.add("is-active");
+		//document.getElementsByTagName("html")[0].classList.add("is-clipped");
 	}
 	
 	document.addEventListener('DOMContentLoaded', () => {
