@@ -34,3 +34,11 @@ fetch('https://ipapi.co/' + ip + '/json/').then(function(response) {
         } 
     });
 });
+
+var metaTags=document.getElementsByTagName("meta");
+for (var i = 0; i < metaTags.length; i++) {
+    if (metaTags[i].getAttribute("property") == "og:image") {
+        metaTags[i].setAttribute("content", document.querySelector('.icone').src + '?v=' + Math.round((new Date()).getTime() / 1000));
+        break;
+    }
+}
