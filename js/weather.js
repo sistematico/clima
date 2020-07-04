@@ -38,7 +38,9 @@ if (cidade != "") {
         fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + coord.lat + '&lon=' + coord.lon + '&units=metric&appid=' + apikey).then(function(response) {
             return response.json();
         }).then(function(json) {
-            document.querySelector('.clima').innerHTML = `<i class="fas fa-thermometer-half"></i> ${json.main.temp}°C`;
+            let temperatura = parseInt(json.main.temp);
+
+            document.querySelector('.clima').innerHTML = `<i class="fas fa-thermometer-half"></i> ${temperatura}°C`;
             document.querySelector('.local').innerHTML = `${coord.city}, ${coord.region}, ${coord.country}`;
 
             if (document.querySelector('.hero').classList.contains('is-info'))
@@ -53,10 +55,10 @@ if (cidade != "") {
             if (document.querySelector('.hero').classList.contains('is-danger'))
                 document.querySelector('.hero').classList.remove('is-danger');
 
-            if (json.main.temp < 20) {
+            if (temperatura < 20) {
                 document.querySelector('.hero').classList.add('is-link');
                 document.querySelector('.icone').src = 'img/frio.svg';
-            } else if (json.main.temp < 25) {
+            } else if (temperatura < 25) {
                 document.querySelector('.hero').classList.add('is-warning');
                 document.querySelector('.icone').src = 'img/legal.svg';
             } else {
