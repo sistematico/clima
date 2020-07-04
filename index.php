@@ -82,10 +82,9 @@
 		<div class="modal-background"></div>
   		<div class="modal-content">
 		  	<div class="notification is-danger">
-  			<!-- <button class="delete"></button> -->
-  			Primar lorem ipsum dolor sit amet, consectetur
-  			adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
-  			consectetur adipiscing elit
+  				Este site não funciona com o adblock ativo, considere colaca-lo na whitelist ou desativar temporariamento seu bloqueador de anúncios.<br /><br />
+				Nós não temos <strong>nenhum</strong> anúncio em nossa página.<br /><br />
+				Obrigado.
 			</div>
   		</div>
   		<button class="modal-close is-large" aria-label="close"></button>
@@ -101,15 +100,13 @@
 		//document.getElementsByTagName("html")[0].classList.add("is-clipped");
 	//}
 	
-	document.addEventListener('DOMContentLoaded', () => {
-  		(document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
-    		$notification = $delete.parentNode;
-
-    		$delete.addEventListener('click', () => {
-      			$notification.parentNode.removeChild($notification);
-    		});
-  		});
+	document.querySelector(".modal-close").addEventListener('click', () => {
+		document.getElementById("warn").classList.remove("is-active");
 	});
+
+	setTimeout(() => {
+		document.getElementById("warn").classList.remove("is-active");
+	}, 8000);
 	</script>
 	<script src="js/weather.js"></script>
 </body>
