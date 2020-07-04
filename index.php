@@ -21,6 +21,7 @@
 		const apikey = "<?php echo $config['api_key']; ?>";
 		const ip = "<?php echo $_SERVER['REMOTE_ADDR']; ?>";
 	</script> 
+	<script src="js/ads.js"></script>
 	<script src="js/weather.js"></script>
 </body>
 </html>
