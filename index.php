@@ -20,9 +20,8 @@ $config = include('cfg/config.php');
 	<link rel="shortcut icon" href="img/favicon.ico">
 </head>
 <body>
-	corpo
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script src="js/scripts.js"></script>
+	<div class="clima"></div>
+	<script src="js/weather.js"></script>
 </body>
 </html>
 <script>
