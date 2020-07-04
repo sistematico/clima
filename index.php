@@ -90,11 +90,6 @@
   		<button class="modal-close is-large" aria-label="close"></button>
 	</div>
 	<script>
-		const apikey = "<?php echo $config['api_key']; ?>";
-		const ip = "<?php echo $_SERVER['REMOTE_ADDR']; ?>";
-	</script>
-	<script src="js/navbar.js"></script>
-	<script>
 	document.addEventListener('DOMContentLoaded', init, false);
 
 	function init(){
@@ -135,6 +130,11 @@
 	document.querySelector(".modal-close").addEventListener('click', () => {
 		document.getElementById("warn").classList.remove("is-active");
 	});
+	</script>
+	<script src="js/navbar.js"></script>
+	<script>
+		const apikey = "<?php echo $config['api_key']; ?>";
+		const ip = "<?php echo $_SERVER['REMOTE_ADDR']; ?>";
 	</script>
 	<script src="js/weather.js"></script>
 </body>
