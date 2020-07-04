@@ -46,7 +46,7 @@
 		<div class="hero-body">
 			<div class="container has-text-centered">
 				<p>
-					<figure class="image is-128x128">
+					<figure class="image container is-128x128">
   						<img class="icone" src="">
 					</figure>
 				</p>
