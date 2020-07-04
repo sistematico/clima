@@ -8,6 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Clima</title>
 		<link rel="stylesheet" href="css/bulma.min.css">
+		<link rel="stylesheet" href="css/fontawesome.min.css">
 </head>
 <body>
 	<section class="hero is-info is-large">
