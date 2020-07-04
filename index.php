@@ -9,6 +9,7 @@
 		<title>Clima</title>
 		<link rel="stylesheet" href="css/bulma.min.css">
 		<link rel="stylesheet" href="css/fontawesome.min.css">
+		<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 	<section class="hero is-info is-fullheight">
@@ -45,12 +46,10 @@
 
 		<div class="hero-body">
 			<div class="container has-text-centered">
-				<p>
-					<figure class="image container is-128x128">
-  						<img class="icone" src="">
-					</figure>
-				</p>
-				<p class="title clima"></p>
+				<figure class="image container is-128x128">
+  					<img class="icone" src="">
+				</figure>
+				<p class="title clima mt-3"></p>
 				<p class="subtitle local"></p>
 			</div>
 		</div>
