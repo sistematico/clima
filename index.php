@@ -92,7 +92,8 @@
 	<script>
 		const apikey = "<?php echo $config['api_key']; ?>";
 		const ip = "<?php echo $_SERVER['REMOTE_ADDR']; ?>";
-	</script> 
+	</script>
+	<script src="js/navbar.js"></script>
 	<script>
 	document.addEventListener('DOMContentLoaded', init, false);
 
