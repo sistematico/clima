@@ -78,10 +78,15 @@
 		</div>
 	</section>
 
-	<div class="modal">
+	<div id="warn" class="modal">
 		<div class="modal-background"></div>
   		<div class="modal-content">
-    		<!-- Any other Bulma elements you want -->
+		  	<div class="notification is-danger">
+  			<!-- <button class="delete"></button> -->
+  			Primar lorem ipsum dolor sit amet, consectetur
+  			adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+  			consectetur adipiscing elit
+			</div>
   		</div>
   		<button class="modal-close is-large" aria-label="close"></button>
 	</div>
@@ -93,8 +98,18 @@
 	<script src="js/weather.js"></script>
 	<script>
     if (window.canRunAds === undefined) {
-    	showFallbackImage();
-    }
+    	document.getElementById("warn").classList.add("is-active");
+	}
+	
+	document.addEventListener('DOMContentLoaded', () => {
+  (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+    $notification = $delete.parentNode;
+
+    $delete.addEventListener('click', () => {
+      $notification.parentNode.removeChild($notification);
+    });
+  });
+});
 	</script>
 </body>
 </html>
