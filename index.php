@@ -65,7 +65,7 @@
 			</div>
 		</div>
 
-		<div class="hero-foot">
+		<!-- <div class="hero-foot">
 			<nav class="tabs is-boxed is-fullwidth">
 				<div class="container">
 					<ul>
@@ -75,9 +75,8 @@
 					</ul>
 				</div>
 			</nav>
-		</div>
+		</div> -->
 	</section>
-
 	<div id="warn" class="modal">
 		<div class="modal-background"></div>
   		<div class="modal-content">
@@ -91,24 +90,13 @@
 	</div>
 	<script src="/js/dfp.js" type="text/javascript"></script>
 	<script type="text/javascript">
-
 	if (!document.getElementById('UWlojRuwYmAb')){
 		document.getElementById("warn").classList.add("is-active");
-				setTimeout(() => {
-					document.getElementById("warn").classList.remove("is-active");
-				}, 8000);
+		setTimeout(() => {
+			document.getElementById("warn").classList.remove("is-active");
+		}, 15000);
+	} 
 
-  
-} 
-
-
-		
-				//document.getElementById("warn").classList.remove("is-active");
-
-   
-
-
-	
 	document.querySelector(".modal-close").addEventListener('click', () => {
 		document.getElementById("warn").classList.remove("is-active");
 	});
