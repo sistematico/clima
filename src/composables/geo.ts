@@ -7,6 +7,5 @@ export async function useGeo(ip: string) {
     'User-Agent': `keycdn-tools:${window.location.href}`
   })
 
-  const data = await (await fetch(url, { headers })).json()
-  return data
+  return await (await fetch(url, { method: 'get', headers })).json()
 }
