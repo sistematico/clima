@@ -13,7 +13,7 @@ onMounted(async () => {
   //   .then(response => response.json())
   //   .then(data => console.log(data))
 
-  alert(window.location.href)
+  alert(window.location.origin)
 
   
 

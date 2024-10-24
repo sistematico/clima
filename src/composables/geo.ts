@@ -4,7 +4,7 @@ export async function useGeo(ip: string) {
   const headers = new Headers({
     'Accept': 'application/json',
     'Content-Type': 'application/json',
-    'User-Agent': `keycdn-tools:${window.location.origin}`
+    'User-Agent': `keycdn-tools:${window.location.href}`
   })
 
   const data = await (await fetch(url, { headers })).json()
