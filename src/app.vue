@@ -1,39 +1,47 @@
 <script setup lang="ts">
-// import HelloWorld from './components/HelloWorld.vue'
+import { ref, onMounted } from 'vue'
+import { useIp } from '@/composables/ip'
+
+const url = 'https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m,rain,cloud_cover'
+const data = ref('Teste')
+
+onMounted(async () => {
+  const ip = await useIp()
+  
+  // fetch(url)
+  //   .then(response => response.json())
+  //   .then(data => console.log(data))
+
+    data.value = ip
+})
 </script>
 <template>
-  <!-- <div> -->
-  <!-- <a href="https://vitejs.dev" target="_blank"> -->
-  <!-- <img src="/wheater.svg" class="logo" alt="Clima" /> -->
-  <!-- </a> -->
-  <!-- </div> -->
-  <!-- <HelloWorld msg="Vite + Vue" /> -->
-  <section class="section">
-    <div class="container">
-      <h1 class="title mb-3">Clima</h1>
-      <p class="subtitle mb-3">
-        Modern CSS framework based on
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a>
-      </p>
-      <div class="field mb-3">
-        <div class="control">
-          <input class="input" type="text" placeholder="Input">
-        </div>
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <div class="float-md-start mb-0">
+        <img class="img-fluid" src="/wheater.svg" alt="Clima" style="max-height: 40px;" />
+        Clima
       </div>
-      <div class="field mb-3">
-        <p class="control">
-          <span class="select">
-            <select>
-              <option>Select dropdown</option>
-            </select>
-          </span>
-        </p>
-      </div>
-      <div class="buttons">
-        <a class="button is-primary">Primary</a>
-        <a class="button is-link">Link</a>
-      </div>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Início</a>
+      </nav>
     </div>
-  </section>
+  </header>
+
+  <main class="px-3">
+    <h1>{{ data }}</h1>
+    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+    <p class="lead">
+      <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Learn more</a>
+    </p>
+  </main>
+
+  <footer class="mt-auto text-white-50">
+    <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
+  </footer>
+</div>
 </template>
+<style>
+@import url('/cover.css');
+</style>
