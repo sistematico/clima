@@ -1,18 +1,23 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { useIp } from '@/composables/ip'
+// import { useIp } from '@/composables/ip'
+import { useGeo } from '@/composables/geo'
 
-const url = 'https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m,rain,cloud_cover'
+// const url = 'https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m,rain,cloud_cover'
 const data = ref('Teste')
 
 onMounted(async () => {
-  const ip = await useIp()
+  // const ip = await useIp()
   
   // fetch(url)
   //   .then(response => response.json())
   //   .then(data => console.log(data))
 
-    data.value = ip
+  alert(window.location.href)
+
+  
+
+  data.value = await useGeo('138.84.42.211')
 })
 </script>
 <template>
